@@ -1,0 +1,6 @@
+# This is an implicit value, here for clarity
+--index https://pypi.python.org/simple/
+
+docopt==0.6.2
+requests==2.11.1
+Jinja2==2.8
