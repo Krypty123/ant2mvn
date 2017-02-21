@@ -6,7 +6,7 @@ import requests
 
 from ant2mvn import logger
 
-log = logger.getLogger(__name__)
+log = logger.get_logger(__name__)
 
 def get_files(path, file_extension=""):
     file_pathes = []

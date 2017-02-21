@@ -53,7 +53,7 @@ from ant2mvn import logger
 from ant2mvn import mvn
 
 
-log = logger.getLogger(__name__)
+log = logger.get_logger(__name__)
 
 if __name__ == '__main__':
     args = docopt(__doc__, version='Ant2Maven 1.0')
