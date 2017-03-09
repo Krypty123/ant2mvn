@@ -2,7 +2,7 @@
 
 """ant2mvn.
 
-Usage: main.py <libs>
+Usage: command_line.py <libs>
   --project.groupId=<project.groupId>
   --project.artifactId=<project.artifactId>
   --project.version=<project.artifactId>
@@ -24,8 +24,8 @@ Usage: main.py <libs>
   [--resources.default=<resources.default>]
   [--resources.test=<resources.test>]
 
-  main.py -h | --help
-  main.py --version
+  command_line.py -h | --help
+  command_line.py --version
 
 Options:
   -h --help     Show this screen.
@@ -55,8 +55,9 @@ from ant2mvn import mvn
 
 log = logger.get_logger(__name__)
 
-if __name__ == '__main__':
-    args = docopt(__doc__, version='Ant2Maven 1.0')
+
+def main():
+    args = docopt(__doc__, version='1.0.0')
     log.debug(args)
 
     libs = args['<libs>']
@@ -96,3 +97,7 @@ if __name__ == '__main__':
     }
 
     mvn.jar2pom(libs, local_dep_dir=args['--local.dependencies.dest'], pom_options=pom_options)
+
+
+if __name__ == '__main__':
+    main()
